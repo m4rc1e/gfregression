@@ -62,9 +62,9 @@ def upload_fonts(upload_type=None):
     if upload_type == 'googlefonts':
         family_after = family.from_user_upload(request.files.getlist('fonts_after'))
         family_before = family.from_googlefonts(family_after.name)
-    elif upload_type == 'user':
-        family_after = family.from_user_upload(request.files.getlist('fonts_after'))
-        family_before = family.from_user_upload(request.files.getlist('fonts_before'))
+    # elif upload_type == 'user':
+    #     family_after = family.from_user_upload(request.files.getlist('fonts_after'))
+    #     family_before = family.from_user_upload(request.files.getlist('fonts_before'))
     # TODO (M Foley) get fonts from a github dir
     uuid = str(uuid4())
 
